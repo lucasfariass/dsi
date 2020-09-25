@@ -20,6 +20,8 @@ spring:
      path: /h2
   datasource:
     url: jdbc:h2:file:~/test
+    user: sa
+    password: sa
   jackson:
     serialization:
       fail-on-empty-beans: false

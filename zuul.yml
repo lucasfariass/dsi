@@ -1,0 +1,27 @@
+server:
+  port: 9070
+
+eureka:
+  instance:
+    hostname: localhost
+    port: 9090
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
+
+zuul:
+  routes:
+    pessoa:
+      path: /services/pessoa/**
+      uri: http://localhost:9091
+    produto:
+      path: /services/produto/**
+      uri: http://localhost:9092
+    setores:
+      path: /services/setores/**
+      uri: http://localhost:9093
+    

@@ -1,0 +1,15 @@
+server:
+  port: 9080
+
+eureka:
+  cleint:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lucasfariass/dsi
+

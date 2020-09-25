@@ -16,12 +16,12 @@ eureka:
 zuul:
   routes:
     pessoa:
-      path: /services/pessoa/**
+      path: /ms-pessoa/**
       uri: http://localhost:9091
     produto:
-      path: /services/produto/**
+      path: /ms-produto/**
       uri: http://localhost:9092
     setores:
-      path: /services/setores/**
+      path: /ms-setores/**
       uri: http://localhost:9093
     
